@@ -30,11 +30,10 @@ public class inClassPractice {
 		while((l = bufferStream.readLine()) != null){
 			printStream.println(l);
 			lineCounter++;
-			String word[] = bufferStream.readLine().split(" ");
+			String word= bufferStream.readLine().split(" ");
 		}
-		
+
 		System.out.println(word);
-		System.out.println(lineCounter + " Lines exists");
 	}	finally {
 			if(inputStream != null) {
 				inputStream.close();
