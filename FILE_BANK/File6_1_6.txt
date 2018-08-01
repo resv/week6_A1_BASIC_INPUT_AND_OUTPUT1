@@ -1,0 +1,6 @@
+LINE 1: Question #6 requirement has been satisfied.
+LINE 2: This file consists of 6 lines but only 3 to be read.
+LINE 3: This should the last line you see (3 total lines)
+LINE 4: If you see this, then the program has failed.
+LINE 5: If you see this, then the program has failed.
+LINE 6: If you see this, then the program has failed.

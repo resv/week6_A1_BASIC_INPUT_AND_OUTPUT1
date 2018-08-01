@@ -12,6 +12,7 @@
 package week6_A1_BASIC_INPUT_AND_OUTPUT1;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,15 +22,18 @@ public class Assignment6_1_4 {
 
 	public static void main(String[] args) throws IOException {
 
-		//I FOUND OUT I CAN SHORTEN THE INITIALIZATION BY INSERTING THE ADDRESS DIRECTLY INTO THE FILE/WRITE READERS
-//		File readin = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week6_A1_BASIC_INPUT_AND_OUTPUT1\\FILE_BANK\\testing.txt");
-//		File writeTo = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week6_A1_BASIC_INPUT_AND_OUTPUT1\\FILE_BANK\\testingto.txt");
 		
-		// INSTANCIATE SCANNER, ASSIGN FILE CLASS "readin" TO A FILE LOCATION
-		FileReader inputStream = new FileReader("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
-															+ "\\src\\week6_A1_BASIC_INPUT_AND_OUTPUT1\\FILE_BANK\\File6_1_4..1txt");
-		FileWriter outputStream = new FileWriter("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
-															+ "\\src\\week6_A1_BASIC_INPUT_AND_OUTPUT1\\FILE_BANK\\File6_1_4.2.txt");		
+		File readin = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
+												+ "\\src\\week6_A1_BASIC_INPUT_AND_OUTPUT1\\FILE_BANK\\File6_1_4readin.txt");
+		File writeTo = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
+												+ "\\src\\week6_A1_BASIC_INPUT_AND_OUTPUT1\\FILE_BANK\\File6_1_4writeTo.txt");
+		
+
+		
+//		*********//IMPORTANT************ TAKE NOTE THAT FILE WRITER HAS AN ADDITIONAL PARAMETER
+//		TO CREATE NEW FILE (FALSE) WHILE FALSE WOULD BE TO RECREATE FILE
+		FileReader inputStream = new FileReader(readin);
+		FileWriter outputStream = new FileWriter(writeTo,false);		
 		BufferedReader bufferStream= new BufferedReader(inputStream);
 		PrintWriter printStream = new PrintWriter(outputStream);
 		
@@ -41,10 +45,11 @@ public class Assignment6_1_4 {
 		while((data = bufferStream.readLine()) != null){ // ASSIGN "data" AS THE BUFFER STREAM WHICH GRABS NEXT LINE AND MAKES SURE THERE IS ACTUAL DATA
 			printStream.println(data);	//PRINT THE DATA TO THE FILE
 		}
-		//MSG TO USER TO NOTIFY THAT READ FROM FILE File6_1_4.1 WAS SUCCESFUL INTO WRITING TO File6_1_4.2
-		System.out.println("File6_1_4.1 is vacant with random chars");
-		System.out.println("File6_1_4.1 has been read and copied to File6_1_4.2");
-		System.out.println("To retest this, just erase data from File6_1_4.2 and re-run this java application");
+		//MSG TO USER TO NOTIFY THAT READ FROM FILE File6_1_4readin WAS SUCCESFUL INTO WRITING TO File6_1_4writeTo
+		System.out.println("Question #4 requirement has been satisfied");
+		System.out.println(readin.getName() + " is vacant with random chars");
+		System.out.println(readin.getName()  + " has been read and copied to " + writeTo.getName());
+		System.out.println("To retest this, just erase data from " + writeTo.getName()  + " and re-run this java application");
 		
 	}	finally {
 			if(inputStream != null) {

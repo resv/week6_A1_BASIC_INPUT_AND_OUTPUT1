@@ -1,4 +1,4 @@
 Array element 1: If you are reading this, then the program was successful.
 Array element 2: Each LINE printed here has been stored into an array,
 Array element 3: then printing array elements to console to to satisfy the
-Array element 4: question #2 requirement. (4 total lines/array elements)
+Array element 4: question #3 requirement. (4 total lines/array elements)
