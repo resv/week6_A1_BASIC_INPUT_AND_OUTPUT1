@@ -14,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Assignment6_1_7 {
+public class Assignment1_7 {
 
 	public static void main(String[] args) throws IOException {
 
@@ -48,7 +48,7 @@ public class Assignment6_1_7 {
 					}
 				}
 			}
-			System.out.println(largest); // PRINT OUT LARGEST WORD INTO CONSOLE
+			System.out.println("\"" + largest + "\"" + " is the largest word found in the file!"); // PRINT OUT LARGEST WORD INTO CONSOLE
 
 		} finally {
 			if (scanner != null) {

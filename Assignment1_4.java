@@ -18,7 +18,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Assignment6_1_4 {
+public class Assignment1_4 {
 
 	public static void main(String[] args) throws IOException {
 
