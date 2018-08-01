@@ -29,18 +29,26 @@ public class Assignment6_1_1 {
 		BufferedReader bufferStream = null; 
 		FileReader inputStream = null; //INSTANCIATE FILE READER TO READ FILE WHICH WILL BE PLACED INSIDE THE "bufferStream"
 		
-		//USING TRY TO SATISFY REQ
+		//ASSIGN JAVAIO
 		try {
 			inputStream = new FileReader(readin);
 			bufferStream = new BufferedReader(inputStream);
-			scanner = new Scanner(bufferStream);
-			String data;	//using String "data" to insert values read from file
-			while ((data = bufferStream.readLine()) != null) {
-				System.out.println(data);
+			scanner = new Scanner(bufferStream);	//ADDING A SCANNER TO BUFFER STREAM
+			
+			
+			//USING WHILE LOOP TO COMMAND SCANNER TO CONTINUE IF THERE IS WORD/LINE
+			while (scanner.hasNext()) {	
+				System.out.println(scanner.nextLine());	// TELL SCANNER TO PRINT TO CONSOLE
 			}
 		} finally {
 			if (scanner != null) { 
 				scanner.close(); // CLOSES SCANNER
+			}
+			if (inputStream != null) {
+				inputStream.close(); // CLOSES SCANNER
+			}
+			if (bufferStream != null) {
+				bufferStream.close(); // CLOSES SCANNER
 			}
 		}
 	}
